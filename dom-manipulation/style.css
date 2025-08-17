@@ -1,0 +1,33 @@
+body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      text-align: center;
+    }
+    #quoteDisplay {
+      margin: 20px auto;
+      font-size: 1.3rem;
+      font-style: italic;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      max-width: 500px;
+      min-height: 60px;
+    }
+    input {
+      padding: 6px;
+      margin: 5px;
+      border-radius: 5px;
+      border: 1px solid #aaa;
+    }
+    button {
+      padding: 8px 12px;
+      margin: 8px;
+      border: none;
+      border-radius: 5px;
+      background: teal;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: darkcyan;
+    }

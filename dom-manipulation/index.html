@@ -22,9 +22,18 @@
   <h2>Import / Export Quotes</h2>
   <button onclick="exportToJsonFile()">Export Quotes</button>
   <input type="file" id="importFile" accept=".json" onchange="importFromJsonFile(event)" />
+  
+  <h2>Sync (Mock Server)</h2>
+  <div class="row">
+    <button id="syncNow">Sync Now</button>
+    <label><input type="checkbox" id="autoSyncToggle" /> Auto-sync (30s)</label>
+    <span id="syncStatus" class="badge info">Ready</span>
+  </div>
+
+  <div id="conflicts"></div>
 
   <h2>Add a New Quote</h2>
- 
+   
 <script src="script.js"></script>
 </body>
 </html>

@@ -14,7 +14,7 @@ function showRandomQuote() {
 
   const randomIndex = Math.floor(Math.random() * quotes.length);
   const quote = quotes[randomIndex];
-  quoteDisplay.textContent = `"${quote.text}" — ${quote.category}`;
+  quoteDisplay.innerHTML = `"${quote.text}" — ${quote.category}`;
 }
 
 // Dynamically create Add Quote Form
@@ -32,7 +32,7 @@ function createAddQuoteForm() {
   categoryInput.placeholder = "Enter quote category";
 
   const addBtn = document.createElement("button");
-  addBtn.textContent = "Add Quote";
+  addBtn.innerHTML = "Add Quote";
   addBtn.addEventListener("click", addQuote);
 
   formContainer.appendChild(textInput);

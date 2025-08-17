@@ -150,12 +150,13 @@ function importFromJsonFile(event) {
 // -------------------
 // Server Simulation
 // -------------------
-async function fetchServerQuotes() {
+// Fetch quotes from mock server
+async function fetchQuotesFromServer() {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts?_limit=5");
   const data = await res.json();
   return data.map(post => ({
     text: post.title,
-    category: "Server"
+    category: "Server"  // placeholder category
   }));
 }
 
@@ -203,7 +204,7 @@ function showConflictResolution(localQuote, serverQuote, index) {
 async function syncQuotes() {
   syncStatus.textContent = "Syncing...";
   try {
-    const serverQuotes = await fetchServerQuotes();
+    const serverQuotes = await fetchQuotesFromServer();
 
     serverQuotes.forEach(sq => {
       const idx = quotes.findIndex(lq => lq.text === sq.text);

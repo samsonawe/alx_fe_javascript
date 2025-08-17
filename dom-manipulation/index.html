@@ -12,6 +12,10 @@
   <div id="quoteDisplay">Click "Show New Quote" to begin.</div>
   <button id="newQuote">Show New Quote</button>
 
+  <h2>Import / Export Quotes</h2>
+  <button onclick="exportToJsonFile()">Export Quotes</button>
+  <input type="file" id="importFile" accept=".json" onchange="importFromJsonFile(event)" />
+
   <h2>Add a New Quote</h2>
  
 <script src="script.js"></script>

@@ -218,7 +218,7 @@ async function syncQuotes() {
 
     saveQuotes();
     populateCategories();
-    syncStatus.textContent = "Synced!";
+    syncStatus.textContent = "Quotes synced with server!";
   } catch (err) {
     syncStatus.textContent = "Sync Failed!";
     console.error(err);
